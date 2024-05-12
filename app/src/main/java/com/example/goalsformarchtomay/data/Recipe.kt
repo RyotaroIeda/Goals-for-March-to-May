@@ -9,5 +9,5 @@ data class Recipe(
     val id: Int = 0,
     var title: String,
     var description: String,
-    var imageUrl: String
+    var imageUrl: String? = null
 )
