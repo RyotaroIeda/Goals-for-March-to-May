@@ -1,29 +1,29 @@
 package com.example.goalsformarchtomay.content
 
-import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Text
-import androidx.compose.material.TopAppBar
+import androidx.compose.material.*
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Alignment
-import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 
 @Composable
 fun Header() {
     TopAppBar(
-        backgroundColor = MaterialTheme.colors.secondary,
-        elevation = 4.dp
-    ) {
-        Box(
-            modifier = Modifier.fillMaxSize(),
-            contentAlignment = Alignment.Center
-        ) {
+        title = {
             Text(
-                text = "Share recipes",
-                style = MaterialTheme.typography.h6
+                text = "Share Recipes",
+                style = MaterialTheme.typography.h6,
+                color = Color.White
             )
+        },
+        backgroundColor = MaterialTheme.colors.primary,
+        contentColor = Color.White,
+        elevation = 8.dp,
+        actions = {
+            IconButton(onClick = {}) {
+                Icon(Icons.Default.MoreVert, contentDescription = "More options")
+            }
         }
-    }
+    )
 }
